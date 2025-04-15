@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Task = ({ task }) => {
+const Task = ({ task, onChangeTask, onDeleteTask }) => {
   const [isEditing, setIsEditing] = useState(false);
 
   let taskContent;
@@ -39,7 +39,9 @@ const Task = ({ task }) => {
           className="form-checkbox text-blue-500 focus:ring-blue-500"
         />
        {taskContent}
-        <button className="px-4 py-1 bg-red-500 text-white rounded-lg hover:bg-red-600">
+        <button
+         onClick={() => onDeleteTask(task.id)}
+         className="px-4 py-1 bg-red-500 text-white rounded-lg hover:bg-red-600">
           Delete
         </button>
       </label>
