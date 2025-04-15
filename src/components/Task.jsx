@@ -10,7 +10,12 @@ const Task = ({ task, onChangeTask, onDeleteTask }) => {
       <>
         <input
             value={task.text}
-            // onChange={(e) => }
+            onChange={(e) =>
+              onChangeTask({
+                ...task,
+                text: e.target.value,
+              })
+            }
             type="text"
             className="bg-gray-200 border-2 border-pink-400 rounded-sm"></input>
         <button
@@ -36,6 +41,13 @@ const Task = ({ task, onChangeTask, onDeleteTask }) => {
       <label className="flex items-center space-x-2">
         <input
           type="checkbox"
+          checked={task.done}
+          onChange={(e) =>{
+            onChangeTask({
+            ...task,
+            done: e.target.checked,
+          });
+        }}
           className="form-checkbox text-blue-500 focus:ring-blue-500"
         />
        {taskContent}
