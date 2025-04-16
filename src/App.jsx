@@ -7,7 +7,8 @@ function App() {
   const initialTasks = [
     {id:0, text:"Html Css Javascript React", done: true},
     {id:1, text:"Reactive Accelator batch2", done: false},
-    {id:2, text:"Programming Hero restart", done: false},
+    {id:2, text:"Programming Hero", done: false},
+    {id:3, text:"Programming Hero restart", done: false},
   ]
 
   const [tasks, setTasks] = useState(initialTasks)
