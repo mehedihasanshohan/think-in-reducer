@@ -49,6 +49,7 @@ const handleDeleteTask = (taskId) => {
   return (
    <>
     <h2 className='text-rose-800 font-bold text-2xl text-center'>React Reducer</h2>
+
       <AddTask onAdd={handleAddTask}></AddTask>
 
       <TaskList
